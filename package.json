@@ -3,18 +3,15 @@
   "version": "1.0.0",
   "description": "Synchronously check if a file is a symbolic link",
   "repository": "shinnn/is-symlink-sync",
+  "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
+  "description": "Synchronously check if a file is a symbolic link",
   "scripts": {
     "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test.js",
     "test": "node test.js | tap-spec",
     "coverage": "istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/shinnn/is-symlink-sync/blob/master/LICENSE"
-    }
-  ],
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -32,15 +29,15 @@
     "detect"
   ],
   "dependencies": {
-    "graceful-fs": "^3.0.6",
+    "graceful-fs": "^3.0.8",
     "tryit": "^1.0.1"
   },
   "devDependencies": {
-    "@shinnn/eslintrc-node": "^1.0.1",
-    "eslint": "^0.20.0",
-    "istanbul": "^0.3.13",
+    "@shinnn/eslintrc-node": "^1.0.2",
+    "eslint": "^0.22.1",
+    "istanbul": "^0.3.14",
     "istanbul-coveralls": "^1.0.2",
-    "tap-spec": "^3.0.0",
+    "tap-spec": "^4.0.0",
     "tape": "^4.0.0"
   }
 }
