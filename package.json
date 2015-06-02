@@ -1,10 +1,9 @@
 {
   "name": "is-symlink-sync",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Synchronously check if a file is a symbolic link",
   "repository": "shinnn/is-symlink-sync",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
-  "description": "Synchronously check if a file is a symbolic link",
   "scripts": {
     "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test.js",
     "test": "node test.js | tap-spec",
