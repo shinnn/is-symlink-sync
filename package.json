@@ -5,9 +5,9 @@
   "repository": "shinnn/is-symlink-sync",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
   "scripts": {
-    "pretest": "eslint --config node_modules/@shinnn/eslintrc-node/rc.json index.js test.js",
-    "test": "node test.js | tap-spec",
-    "coverage": "istanbul cover test.js",
+    "pretest": "eslint --config @shinnn/node-legacy index.js test.js",
+    "test": "node --strong_mode --throw-deprecation --track-heap-objects test.js | tap-spec",
+    "coverage": "node  --strong_mode node_modules/.bin/istanbul cover test.js",
     "coveralls": "${npm_package_scripts_coverage} && istanbul-coveralls"
   },
   "license": "MIT",
@@ -28,15 +28,14 @@
     "detect"
   ],
   "dependencies": {
-    "graceful-fs": "^3.0.8",
+    "graceful-fs": "^4.1.2",
     "tryit": "^1.0.1"
   },
   "devDependencies": {
-    "@shinnn/eslintrc-node": "^1.0.2",
-    "eslint": "^0.24.1",
-    "istanbul": "^0.3.17",
-    "istanbul-coveralls": "^1.0.3",
-    "tap-spec": "^4.0.2",
-    "tape": "^4.0.1"
+    "@shinnn/eslint-config-node-legacy": "^1.0.0",
+    "eslint": "^1.6.0",
+    "istanbul": "^0.3.22",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.1"
   }
 }

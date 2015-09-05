@@ -1,10 +1,10 @@
-'use strict';
+'use strong';
 
-var fs = require('graceful-fs');
-var isSymlinkSync = require('./');
-var test = require('tape');
+const fs = require('graceful-fs');
+const isSymlinkSync = require('./');
+const test = require('tape');
 
-test('is-symlink-sync', function(t) {
+test('is-symlink-sync', t => {
   t.plan(6);
 
   t.equal(isSymlinkSync.name, 'isSymlinkSync', 'should have a function name.');
@@ -38,7 +38,7 @@ test('is-symlink-sync', function(t) {
   );
 
   t.throws(
-    isSymlinkSync.bind(null, {foo: 'bar'}),
+    () => isSymlinkSync({foo: 'bar'}),
     / is not a function\. Argument to is-symlink-sync must be a file path\./,
     'should throw a type error when the argument is not a number.'
   );

@@ -7,10 +7,10 @@
 [![Dependency Status](https://img.shields.io/david/shinnn/is-symlink-sync.svg?label=deps)](https://david-dm.org/shinnn/is-symlink-sync)
 [![devDependency Status](https://img.shields.io/david/shinnn/is-symlink-sync.svg?label=devDeps)](https://david-dm.org/shinnn/is-symlink-sync#info=devDependencies)
 
-Synchronously check if a file is a [symbolic link](http://en.wikipedia.org/wiki/Symbolic_link)
+Synchronously check if a file is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link)
 
 ```javascript
-var isSymlinkSync = require('is-symlink-sync');
+const isSymlinkSync = require('is-symlink-sync');
 
 isSymlinkSync('path/to/symlink'); //=> true
 isSymlinkSync('path/to/non-symlink'); //=> false
@@ -18,16 +18,16 @@ isSymlinkSync('path/to/non-symlink'); //=> false
 
 ## Installation
 
-[Use npm](https://docs.npmjs.com/cli/install).
+[Use npm.](https://docs.npmjs.com/cli/install)
 
-```sh
+```
 npm install is-symlink-sync
 ```
 
 ## API
 
 ```javascript
-var isSymlinkSync = require('is-symlink-sync');
+const isSymlinkSync = require('is-symlink-sync');
 ```
 
 ### isSymlinkSync(*filePath*)
