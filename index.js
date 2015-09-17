@@ -11,7 +11,7 @@ module.exports = function isSymlinkSync(filePath) {
   if (typeof filePath !== 'string') {
     throw new TypeError(
       filePath +
-      ' is not a function. Argument to is-symlink-sync must be a file path.'
+      ' is not a string. Argument to is-symlink-sync must be a file path.'
     );
   }
 

@@ -39,7 +39,7 @@ test('is-symlink-sync', t => {
 
   t.throws(
     () => isSymlinkSync({foo: 'bar'}),
-    / is not a function\. Argument to is-symlink-sync must be a file path\./,
+    / is not a string\. Argument to is-symlink-sync must be a file path\./,
     'should throw a type error when the argument is not a number.'
   );
 });
