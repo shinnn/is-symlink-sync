@@ -4,8 +4,8 @@
 [![Build Status](https://travis-ci.org/shinnn/is-symlink-sync.svg?branch=master)](https://travis-ci.org/shinnn/is-symlink-sync)
 [![Build status](https://ci.appveyor.com/api/projects/status/1e8sfy6cs9dxrs5j?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/is-symlink-sync)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/is-symlink-sync.svg)](https://coveralls.io/r/shinnn/is-symlink-sync)
-[![Dependency Status](https://img.shields.io/david/shinnn/is-symlink-sync.svg?label=deps)](https://david-dm.org/shinnn/is-symlink-sync)
-[![devDependency Status](https://img.shields.io/david/shinnn/is-symlink-sync.svg?label=devDeps)](https://david-dm.org/shinnn/is-symlink-sync#info=devDependencies)
+[![Dependency Status](https://david-dm.org/shinnn/is-symlink-sync.svg)](https://david-dm.org/shinnn/is-symlink-sync)
+[![devDependency Status](https://david-dm.org/shinnn/is-symlink-sync/dev-status.svg)](https://david-dm.org/shinnn/is-symlink-sync#info=devDependencies)
 
 Synchronously check if a file is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link)
 
