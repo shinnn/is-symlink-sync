@@ -4,8 +4,7 @@
 */
 'use strict';
 
-var fs = require('graceful-fs');
-var tryit = require('tryit');
+const lstatSync = require('graceful-fs').lstatSync;
 
 module.exports = function isSymlinkSync(filePath) {
   if (typeof filePath !== 'string') {
@@ -15,14 +14,9 @@ module.exports = function isSymlinkSync(filePath) {
     );
   }
 
-  var result;
-  var isSymbolicLink;
-
-  tryit(function() {
-    isSymbolicLink = fs.lstatSync(filePath).isSymbolicLink();
-  }, function(err) {
-    result = !err && isSymbolicLink;
-  });
-
-  return result;
+  try {
+    return lstatSync(filePath).isSymbolicLink();
+  } catch (e) {
+    return false;
+  }
 };
