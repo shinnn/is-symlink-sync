@@ -4,9 +4,17 @@
 */
 'use strict';
 
-const lstatSync = require('graceful-fs').lstatSync;
+const {lstatSync} = require('graceful-fs');
 
-module.exports = function isSymlinkSync(filePath) {
+module.exports = function isSymlinkSync(...args) {
+  const arglen = args.length;
+
+  if (arglen !== 1) {
+    throw new RangeError(`Expected 1 argument, but got ${arglen || 'no'} arguments instead.`);
+  }
+
+  const [filePath] = args;
+
   if (typeof filePath !== 'string') {
     throw new TypeError(
       filePath +

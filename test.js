@@ -37,7 +37,19 @@ test('is-symlink-sync', async t => {
   t.throws(
     () => isSymlinkSync({foo: 'bar'}),
     / is not a string\. Argument to is-symlink-sync must be a file path\./,
-    'should throw a type error when the argument is not a number.'
+    'should throw an error when the argument is not a number.'
+  );
+
+  t.throws(
+    () => isSymlinkSync(),
+    /^RangeError.*Expected 1 argument, but got no arguments instead\./,
+    'should throw an error when it takes no arguments.'
+  );
+
+  t.throws(
+    () => isSymlinkSync('1', 2),
+    /^RangeError.*Expected 1 argument, but got 2 arguments instead\./,
+    'should throw an error when it takes too many arguments.'
   );
 
   t.end();
