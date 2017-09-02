@@ -30,15 +30,16 @@ const isSymlinkSync = require('is-symlink-sync');
 
 ### isSymlinkSync(*filePath*)
 
-*filePath*: `string`  
+*filePath*: `string`, [`Buffer`](https://nodejs.org/api/buffer.html#buffer_class_buffer) or [`URL`](https://nodejs.org/api/url.html#url_class_url)  
 Return: `boolean`
 
 It returns `true` if the file exists and is a symbolic link, otherwise `false`.
 
-Only when the argument is not a string, it throws an error.
+Only when the argument type is invalid, it throws an error.
 
 ```javascript
-isSymlinkSync(123); // throws a type error
+isSymlinkSync(Buffer.from('123')); // doesn't throw any errors
+isSymlinkSync(123); // throws a TypeError
 ```
 
 ## License

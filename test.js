@@ -1,6 +1,9 @@
-'use strong';
+'use strict';
+
+const {URL} = require('url');
 
 const createSymlink = require('create-symlink');
+const fileUrl = require('file-url');
 const isSymlinkSync = require('./');
 const rmfr = require('rmfr');
 const test = require('tape');
@@ -17,13 +20,13 @@ test('is-symlink-sync', async t => {
   await rmfr('__tmp_path__');
 
   t.equal(
-    isSymlinkSync(__filename),
+    isSymlinkSync(Buffer.from(__filename)),
     false,
     'should return false when the file is not a symbolic link.'
   );
 
   t.equal(
-    isSymlinkSync(__dirname),
+    isSymlinkSync(new URL(fileUrl(__dirname))),
     false,
     'should return false when the path is a directory path.'
   );
@@ -34,9 +37,21 @@ test('is-symlink-sync', async t => {
     'should return false when the file doesn\'t exist.'
   );
 
+  t.equal(
+    isSymlinkSync(''),
+    false,
+    'should return false when it takes an empty string.'
+  );
+
+  t.equal(
+    isSymlinkSync(Buffer.alloc(0)),
+    false,
+    'should return false when it takes an empty buffer.'
+  );
+
   t.throws(
     () => isSymlinkSync({foo: 'bar'}),
-    / is not a string\. Argument to is-symlink-sync must be a file path\./,
+    /^TypeError.*path must be a string or Buffer/,
     'should throw an error when the argument is not a number.'
   );
 

@@ -15,16 +15,13 @@ module.exports = function isSymlinkSync(...args) {
 
   const [filePath] = args;
 
-  if (typeof filePath !== 'string') {
-    throw new TypeError(
-      filePath +
-      ' is not a string. Argument to is-symlink-sync must be a file path.'
-    );
-  }
-
   try {
     return lstatSync(filePath).isSymbolicLink();
-  } catch (e) {
+  } catch (err) {
+    if (err.name === 'TypeError') {
+      throw err;
+    }
+
     return false;
   }
 };
