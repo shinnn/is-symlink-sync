@@ -1,6 +1,6 @@
 {
   "name": "is-symlink-sync",
-  "version": "2.0.0-1",
+  "version": "2.0.0-2",
   "description": "Synchronously check if a file is a symbolic link",
   "repository": "shinnn/is-symlink-sync",
   "author": "Shinnosuke Watanabe (https://github.com/shinnn)",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@shinnn/eslint-config-node": "^4.0.2",
     "create-symlink": "^1.0.0",
-    "eslint": "^4.5.0",
+    "eslint": "^4.6.1",
     "file-url": "^2.0.2",
     "nyc": "^11.1.0",
     "rmfr": "^1.0.3",
