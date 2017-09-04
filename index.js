@@ -4,7 +4,7 @@
 */
 'use strict';
 
-const {lstatSync} = require('graceful-fs');
+const {lstatSync} = require('fs');
 
 module.exports = function isSymlinkSync(...args) {
   const arglen = args.length;

@@ -27,9 +27,6 @@
     "check",
     "detect"
   ],
-  "dependencies": {
-    "graceful-fs": "^4.1.11"
-  },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^4.0.2",
     "create-symlink": "^1.0.0",
