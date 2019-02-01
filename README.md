@@ -2,10 +2,9 @@
 
 [![npm version](https://img.shields.io/npm/v/is-symlink-sync.svg)](https://www.npmjs.com/package/is-symlink-sync)
 [![Build Status](https://travis-ci.com/shinnn/is-symlink-sync.svg?branch=master)](https://travis-ci.com/shinnn/is-symlink-sync)
-[![Build status](https://ci.appveyor.com/api/projects/status/1e8sfy6cs9dxrs5j?svg=true)](https://ci.appveyor.com/project/ShinnosukeWatanabe/is-symlink-sync)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/is-symlink-sync.svg)](https://coveralls.io/r/shinnn/is-symlink-sync)
 
-A [Node.js](https://nodejs.org) module to check if a path is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link)
+A [Node.js](https://nodejs.org) module to check if a path is a [symbolic link](https://en.wikipedia.org/wiki/Symbolic_link) synchronously
 
 ```javascript
 const isSymlinkSync = require('is-symlink-sync');
