@@ -50,19 +50,19 @@ test('is-symlink-sync', async t => {
 
 	t.throws(
 		() => isSymlinkSync({foo: 'bar'}),
-		/^TypeError: path must be a string or Buffer/u,
+		/ERR_INVALID_ARG_TYPE/u,
 		'should throw an error when the argument is not a number.'
 	);
 
 	t.throws(
 		() => isSymlinkSync(),
-		/^RangeError: Expected 1 argument, but got no arguments instead\./u,
+		/^RangeError: Expected 1 argument \(<string\|Buffer\|Uint8Array\|URL>\), but got no arguments\./u,
 		'should throw an error when it takes no arguments.'
 	);
 
 	t.throws(
-		() => isSymlinkSync('1', 2),
-		/^RangeError: Expected 1 argument, but got 2 arguments instead\./u,
+		() => isSymlinkSync('one', 'two'),
+		/^RangeError: Expected 1 argument \(<string\|Buffer\|Uint8Array\|URL>\), but got 2 arguments\./u,
 		'should throw an error when it takes too many arguments.'
 	);
 
